@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Listing of Package = () => {
+const page = () => {
   return (
-    <div>Listing of Package</div>
+    <div>Listing of Page</div>
   )
 }
 
-export default Listing of Package
+export default page
