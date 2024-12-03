@@ -1,9 +1,12 @@
 import React from 'react'
 
-const add-package = () => {
+const AddPackage = () => {
   return (
-    <div>add-package</div>
+    <div>
+      add-package
+      pehala ye karo
+    </div>
   )
 }
 
-export default add-package
+export default AddPackage;

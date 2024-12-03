@@ -1,9 +1,9 @@
 import React from 'react'
 
-const view-package = () => {
+const ViewPackage = () => {
   return (
     <div>view-package</div>
   )
 }
 
-export default view-package
+export default ViewPackage;

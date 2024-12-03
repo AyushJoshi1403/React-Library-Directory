@@ -35,8 +35,31 @@ router.get('/getall', verifyToken, (req, res) => {
         });
 });
 
-router.get('/getbycity/:city', (req, res) => {
-    Model.find({ city: req.params.city })
+// getbytitle
+router.get('/getbytitle/:title', (req, res) => {
+    Model.find({ title: req.params.title })
+        .then((result) => {
+            res.status(200).json(result);
+        }).catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+// getbypackageName
+router.get('/getbypackageName/:packageName', (req, res) => {
+    Model.find({ packageName: req.params.packageName })
+        .then((result) => {
+            res.status(200).json(result);
+        }).catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+// getbydifficulty
+router.get('/getbydifficulty/:difficulty', (req, res) => {
+    Model.find({ difficulty: req.params.difficulty })
         .then((result) => {
             res.status(200).json(result);
         }).catch((err) => {
