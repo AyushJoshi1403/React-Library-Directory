@@ -36,6 +36,7 @@ router.get('/getall', verifyToken, (req, res) => {
         });
 });
 
+// getbycity
 router.get('/getbycity/:city', (req, res) => {
     Model.find({ city: req.params.city })
         .then((result) => {
