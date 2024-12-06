@@ -17,6 +17,7 @@ const AddPackage = () => {
       lastPublished: '',
       link: ''
     },
+    
     onSubmit: (values) => {
       console.log(values);
 
@@ -28,9 +29,7 @@ const AddPackage = () => {
           console.log(err);
           toast.error(err?.response?.data?.message || 'Some error occured');
         });
-
     },
-
   });
 
   return (
