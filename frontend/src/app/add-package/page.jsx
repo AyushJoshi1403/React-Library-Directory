@@ -15,21 +15,20 @@ const AddPackage = () => {
       downloads: '',
       publishedBy: '',
       lastPublished: '',
-      link: '',
-      createdAt: '',
+      link: ''
     },
     onSubmit: (values) => {
       console.log(values);
 
       axios.post('http://localhost:5000/package/add', values)
-      .then((result) => {
-        toast.success('Package added successfully');
-        router.push('/view-package');
-      }).catch((err) => {
-        console.log(err);
-        toast.error(err?.response?.data?.message || 'Some error occured');
-      });
-      
+        .then((result) => {
+          toast.success('Package added successfully');
+          // router.push('/view-package');
+        }).catch((err) => {
+          console.log(err);
+          toast.error(err?.response?.data?.message || 'Some error occured');
+        });
+
     },
 
   });
@@ -40,11 +39,11 @@ const AddPackage = () => {
         <div className='p-4'>
           <div className='text-center'>
             <h1 className='block text-2xl font-bold text-gray-800 dark:text-white'>
-              Add-package
+              Add Package
             </h1>
           </div>
           <div className='mt-8'>
-            <form>
+            <form onSubmit={addpackageForm.handleSubmit}>
               <div className='grid gap-y-4'>
                 <div>
                   <label
@@ -53,6 +52,9 @@ const AddPackage = () => {
                     Title
                   </label>
                   <input
+                    id="title"
+                    onChange={addpackageForm.handleChange}
+                    value={addpackageForm.values.title}
                     type="text"
                     className='border py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600'
                   />
@@ -64,6 +66,9 @@ const AddPackage = () => {
                     Package Name
                   </label>
                   <input
+                    id="packageName"
+                    onChange={addpackageForm.handleChange}
+                    value={addpackageForm.values.packageName}
                     type="text"
                     className='border py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600'
                   />

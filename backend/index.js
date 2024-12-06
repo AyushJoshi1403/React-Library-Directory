@@ -1,5 +1,6 @@
 // importing express
 const express = require('express');
+const UserRouter = require('./routers/userRouter');
 const PackageRouter = require('./routers/packageRouter');
 const cors = require('cors');
 
@@ -13,6 +14,7 @@ app.use(cors({
 }));
 
 app.use(express.json());
+app.use('/user', UserRouter);
 app.use('/package', PackageRouter);
 
 // accept and process request
