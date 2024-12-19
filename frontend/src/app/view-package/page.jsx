@@ -41,20 +41,6 @@ const ViewPackage = () => {
               </div>
             </div>
             {/* body - end */}
-
-            {/* description - start */}
-            <div className="mt-5 md:mt-10 lg:mt-5">
-              <div className="mb-3 text-lg font-semibold text-gray-800">
-                Description
-              </div>
-              <p className="text-gray-500">
-                This is a section of some simple filler text, also known as
-                placeholder text. It shares some characteristics of a real written
-                text but is random or otherwise generated. It may be used to display
-                a sample of fonts or generate text for testing.
-              </p>
-            </div>
-            {/* description - end */}
           </div>
           {/* content - end */}
         </div>

@@ -4,7 +4,7 @@ const mySchema = new Schema({
     title: String,
     packageName: String,
     version: String,
-    lastPublished: { type: Date, required: true },
+    lastPublished: String,
     difficulty: { type: Number, default: 0 },
     downloads: { type: Number, default: 0 },
     publishedBy: String,

@@ -60,7 +60,7 @@ const AddPackage = () => {
                 </div>
                 <div>
                   <label
-                    htmlFor="title"
+                    htmlFor="packageName"
                     className='block text-sm mb-2 dark:text-white'>
                     Package Name
                   </label>
@@ -74,7 +74,7 @@ const AddPackage = () => {
                 </div>
                 <div>
                   <label
-                    htmlFor="title"
+                    htmlFor="version"
                     className='block text-sm mb-2 dark:text-white'>
                     Version
                   </label>
@@ -88,7 +88,7 @@ const AddPackage = () => {
                 </div>
                 <div>
                   <label
-                    htmlFor="title"
+                    htmlFor="lastPublished"
                     className='block text-sm mb-2 dark:text-white'>
                     Last Published
                   </label>
@@ -102,7 +102,7 @@ const AddPackage = () => {
                 </div>
                 <div>
                   <label
-                    htmlFor="title"
+                    htmlFor="difficulty"
                     className='block text-sm mb-2 dark:text-white'>
                     Difficulty
                   </label>
@@ -116,7 +116,7 @@ const AddPackage = () => {
                 </div>
                 <div>
                   <label
-                    htmlFor="title"
+                    htmlFor="downloads"
                     className='block text-sm mb-2 dark:text-white'>
                     Downloads
                   </label>
@@ -130,7 +130,7 @@ const AddPackage = () => {
                 </div>
                 <div>
                   <label
-                    htmlFor="title"
+                    htmlFor="publishedBy"
                     className='block text-sm mb-2 dark:text-white'>
                     Published By
                   </label>
@@ -144,7 +144,7 @@ const AddPackage = () => {
                 </div>
                 <div>
                   <label
-                    htmlFor="title"
+                    htmlFor="link"
                     className='block text-sm mb-2 dark:text-white'>
                     Link
                   </label>
@@ -152,17 +152,6 @@ const AddPackage = () => {
                     id="link"
                     onChange={addpackageForm.handleChange}
                     value={addpackageForm.values.link}
-                    type="text"
-                    className='border py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600'
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="title"
-                    className='block text-sm mb-2 dark:text-white'>
-                    Created At
-                  </label>
-                  <input
                     type="text"
                     className='border py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600'
                   />
