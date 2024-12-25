@@ -37,7 +37,8 @@ const Packages = () => {
   return (
     <div>
       <h1>List of Packages</h1>
-      <h2>all packages listed</h2>
+      <h1>all packages listed</h1>
+      <h1>packages</h1>
     </div>
   )
 }
