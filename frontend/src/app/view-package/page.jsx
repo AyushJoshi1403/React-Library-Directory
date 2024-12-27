@@ -46,7 +46,6 @@ const ViewPackage = () => {
         </div>
       </div>
     </div>
-
   )
 }
 

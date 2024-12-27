@@ -36,9 +36,51 @@ const Packages = () => {
 
   return (
     <div>
-      <h1>List of Packages</h1>
-      <h1>all packages listed</h1>
-      <h1>packages</h1>
+      <div>
+        <div>
+          <h1 className='text-center text-2xl font-bold'>List of Packages</h1>
+        </div>
+        <div>
+          <div>
+            <div>
+              <label>Title</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label>Package Name</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label>Version</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label>Last Published</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label>Difficulty</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label>Downloads</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label>Published By</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label>Link</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label>Created At</label>
+              <input type="text" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
