@@ -37,11 +37,11 @@ const Packages = () => {
   return (
     <div className=''>
       <div className='container mx-auto py-10'>
-        <h1 className='text-center text-2xl font-bold'>Manage Users</h1>
-
+        <h1 className='text-center text-2xl font-bold'>List of Packages</h1>
         <table className='w-full '>
           <thead>
             <tr className='bg-gray-600 text-white font-bold'>
+              <th className='p-3'>ID</th>
               <th className='p-3'>Title</th>
               <th className='p-3'>Package Name</th>
               <th className='p-3'>Version</th>
@@ -55,23 +55,25 @@ const Packages = () => {
           </thead>
           <tbody>
             {
-              packageList.map((user) => {
+              packageList.map((packages) => {
                 return (
                   <tr className='border bg-gray-200'>
-                    <td className='p-3'>{user._id}</td>
-                    <td className='p-3'>{user.name}</td>
-                    <td className='p-3'>{user.email}</td>
-                    <td className='p-3'>{user.password}</td>
-                    <td className='p-3'>{user.city}</td>
-                    <td className='p-3'>{new Date(user.createdAt).toDateString()}</td>
-                    
+                    <td className='p-3'>{packages._id}</td>
+                    <td className='p-3'>{packages.title}</td>
+                    <td className='p-3'>{packages.packageName}</td>
+                    <td className='p-3'>{packages.version}</td>
+                    <td className='p-3'>{packages.lastPublished}</td>
+                    <td className='p-3'>{packages.difficulty}</td>
+                    <td className='p-3'>{packages.downloads}</td>
+                    <td className='p-3'>{packages.publishedBy}</td>
+                    <td className='p-3'>{packages.link}</td>
+                    <td className='p-3'>{new Date(packages.createdAt).toDateString()}</td>
                   </tr>
                 )
               })
             }
           </tbody>
         </table>
-
       </div>
     </div>
   )
