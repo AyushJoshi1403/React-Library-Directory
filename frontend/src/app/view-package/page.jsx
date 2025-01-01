@@ -1,52 +1,82 @@
-import React from 'react'
+'use client';
+import axios from 'axios';
+import { useRouter } from 'next/navigation';
+import React, { useEffect, useState } from 'react'
+import toast from 'react-hot-toast';
 
-const ViewPackage = () => {
+const Packages = () => {
+
+  const [packageList, setPackageList] = useState([]);
+  const token = localStorage.getItem('token');
+  const router = useRouter();
+
+
+  const fetchPackages = () => {
+    axios.get('http://localhost:5000/package/getall', {
+      headers: {
+        'x-auth-token': token
+      }
+    })
+      .then((result) => {
+        console.table(result.data);
+        setPackageList(result.data);
+      }).catch((err) => {
+        console.log(err);
+
+        if (err?.response?.status === 403) {
+          toast.error('Your are not authorized to view this page');
+          router.push('/login')
+        }
+      });
+  }
+
+  useEffect(() => {
+    fetchPackages();
+  }, [])
+
   return (
-    <div className="bg-white py-6 sm:py-8 lg:py-12">
-      <div className="mx-auto max-w-screen-lg px-4 md:px-8">
-        <div className="grid gap-8 md:grid-cols-2">
-
-          {/* content - start */}
-          <div className="md:py-8">
-            {/* name - start */}
-            <div className="mb-2 md:mb-3">
-              <span className="mb-0.5 inline-block text-gray-700">Title</span>
-              <h1 className="text-3xl text-gray-800 lg:text-4xl">
-                packageName
-              </h1>
-            </div>
-            {/* name - end */}
-
-            {/* body - start */}
-            <div className=''>
-              <div className=''>
-                <h3 className="text-xl text-gray-700 lg:text-xl">
-                  version
-                </h3>
-                <h3 className="text-xl text-gray-700 lg:text-xl">
-                  lastPublished
-                </h3>
-                <h3 className="text-xl text-gray-700 lg:text-xl">
-                  difficulty
-                </h3>
-                <h3 className="text-xl text-gray-700 lg:text-xl">
-                  downloads
-                </h3>
-                <h3 className="text-xl text-gray-700 lg:text-xl">
-                  publishedBy
-                </h3>
-                <h3 className="text-xl text-gray-700 lg:text-xl">
-                  link
-                </h3>
-              </div>
-            </div>
-            {/* body - end */}
-          </div>
-          {/* content - end */}
-        </div>
+    <div className=''>
+      <div className='container mx-auto py-10'>
+        <h1 className='text-center text-2xl font-bold'>List of Packages</h1>
+        <table className='w-full '>
+          <thead>
+            <tr className='bg-gray-600 text-white font-bold'>
+              <th className='p-3'>ID</th>
+              <th className='p-3'>Title</th>
+              <th className='p-3'>Package Name</th>
+              <th className='p-3'>Version</th>
+              <th className='p-3'>Last Published</th>
+              <th className='p-3'>Difficulty</th>
+              <th className='p-3'>Downloads</th>
+              <th className='p-3'>Published By</th>
+              <th className='p-3'>Link</th>
+              <th className='p-3'>Created At</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              packageList.map((packages) => {
+                return (
+                  <tr className='border bg-gray-200'>
+                    <td className='p-3'>{packages._id}</td>
+                    <td className='p-3'>{packages.title}</td>
+                    <td className='p-3'>{packages.packageName}</td>
+                    <td className='p-3'>{packages.version}</td>
+                    <td className='p-3'>{packages.lastPublished}</td>
+                    <td className='p-3'>{packages.difficulty}</td>
+                    <td className='p-3'>{packages.downloads}</td>
+                    <td className='p-3'>{packages.publishedBy}</td>
+                    <td className='p-3'>{packages.link}</td>
+                    <td className='p-3'>{new Date(packages.createdAt).toDateString()}</td>
+                  </tr>
+                )
+              })
+            }
+          </tbody>
+        </table>
       </div>
     </div>
   )
 }
 
-export default ViewPackage;
+export default Packages
