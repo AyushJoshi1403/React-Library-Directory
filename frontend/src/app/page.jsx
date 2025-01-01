@@ -7,7 +7,7 @@ import toast from 'react-hot-toast';
 const Packages = () => {
 
   const [packageList, setPackageList] = useState([]);
-  const token = localStorage.getItem('token');
+  // const token = localStorage.getItem('token');
   const router = useRouter();
 
 
