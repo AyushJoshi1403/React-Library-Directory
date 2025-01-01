@@ -57,17 +57,17 @@ const Packages = () => {
             {
               packageList.map((packages) => {
                 return (
-                  <tr className='border bg-gray-200'>
-                    <td className='p-3'>{packages._id}</td>
-                    <td className='p-3'>{packages.title}</td>
-                    <td className='p-3'>{packages.packageName}</td>
-                    <td className='p-3'>{packages.version}</td>
-                    <td className='p-3'>{packages.lastPublished}</td>
-                    <td className='p-3'>{packages.difficulty}</td>
-                    <td className='p-3'>{packages.downloads}</td>
-                    <td className='p-3'>{packages.publishedBy}</td>
-                    <td className='p-3'>{packages.link}</td>
-                    <td className='p-3'>{new Date(packages.createdAt).toDateString()}</td>
+                  <tr className='border bg-gray-200 text-black'>
+                    <td className='p-3 text-center'>{packages._id}</td>
+                    <td className='p-3 text-center'>{packages.title}</td>
+                    <td className='p-3 text-center'>{packages.packageName}</td>
+                    <td className='p-3 text-center'>{packages.version}</td>
+                    <td className='p-3 text-center'>{packages.lastPublished}</td>
+                    <td className='p-3 text-center'>{packages.difficulty}</td>
+                    <td className='p-3 text-center'>{packages.downloads}</td>
+                    <td className='p-3 text-center'>{packages.publishedBy}</td>
+                    <td className='p-3 text-center'>{packages.link}</td>
+                    <td className='p-3 text-center'>{new Date(packages.createdAt).toDateString()}</td>
                   </tr>
                 )
               })
