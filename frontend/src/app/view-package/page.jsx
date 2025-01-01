@@ -11,7 +11,7 @@ const ViewPackage = () => {
             {/* name - start */}
             <div className="mb-2 md:mb-3">
               <span className="mb-0.5 inline-block text-gray-700">Title</span>
-              <h1 className="text-3xl font-bold text-gray-800 lg:text-4xl">
+              <h1 className="text-3xl text-gray-800 lg:text-4xl">
                 packageName
               </h1>
             </div>
