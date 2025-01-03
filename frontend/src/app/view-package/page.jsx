@@ -37,7 +37,7 @@ const Packages = () => {
   return (
     <div className=''>
       <div className='container mx-auto py-10'>
-        <h1 className='text-center text-2xl font-bold'>List of Packages</h1>
+        <h1 className='text-center text-2xl font-bold mb-5'>List of Packages</h1>
         <table className='w-full '>
           <thead>
             <tr className='bg-gray-600 text-white font-bold'>
