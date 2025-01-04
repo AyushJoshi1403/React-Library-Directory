@@ -4,7 +4,7 @@ const page = () => {
   return (
     <div>
       <div>
-        <div className='font-bold'>
+        <div className='text-center text-4xl font-bold mt-10'>
         <h1>React Library Directory</h1>
         </div>
       </div>
