@@ -234,7 +234,7 @@ const Navbar = () => {
                         <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
                         <circle cx={12} cy={7} r={4} />
                       </svg>
-                      Account
+                      Explore
                     </a>
                     <a
                       className="p-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
@@ -257,7 +257,7 @@ const Navbar = () => {
                         <path d="M22 13a18.15 18.15 0 0 1-20 0" />
                         <rect width={20} height={14} x={2} y={6} rx={2} />
                       </svg>
-                      Work
+                      Popular
                     </a>
                     <a
                       className="p-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
