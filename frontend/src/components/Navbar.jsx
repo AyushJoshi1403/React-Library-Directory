@@ -280,7 +280,7 @@ const Navbar = () => {
                         <path d="M15 18h-5" />
                         <path d="M10 6h8v4h-8V6Z" />
                       </svg>
-                      Blog
+                      Trending
                     </a>
                   </div>
                 </div>
