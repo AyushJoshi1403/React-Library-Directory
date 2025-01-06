@@ -234,7 +234,7 @@ const Navbar = () => {
                         <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
                         <circle cx={12} cy={7} r={4} />
                       </svg>
-                      Explore
+                      sign up
                     </a>
                     <a
                       className="p-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
