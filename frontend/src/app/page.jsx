@@ -8,7 +8,6 @@ const page = () => {
         <h1>React Library Directory</h1>
         </div>
         <div><h1 className='text-center text-2xl'>List of Librarys</h1></div>
-        <div><h1 className='text-center text-2xl'>List of Librarys</h1></div>
       </div>
     </div>
   )
