@@ -9,6 +9,7 @@ const page = () => {
         </div>
         <div><h1 className='text-center text-2xl'>List of Library</h1></div>
         <div><h1 className='text-center text-2xl'>List of Library</h1></div>
+        <div><h1 className='text-center text-2xl'>List of Library</h1></div>
       </div>
     </div>
   )
