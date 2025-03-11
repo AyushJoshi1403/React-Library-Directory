@@ -8,7 +8,10 @@ const page = () => {
         <h1>List of librarys</h1>
         </div>
         <div className='text-center'>
-          <input className='w-[75%] border bg-transparent rounded-l' type="text" placeholder='Search libraries...' />
+          <input 
+            className='w-[75%] py-3 px-4 border bg-transparent border-gray-600 rounded-l mb-8 hover:' 
+            type="text" placeholder='Search libraries...' 
+          />
         </div>
       </div>
     </div>
