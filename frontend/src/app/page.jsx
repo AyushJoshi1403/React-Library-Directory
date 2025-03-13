@@ -13,6 +13,9 @@ const page = () => {
             type="text" placeholder='Search libraries...' 
           />
         </div>
+        <div>
+          
+        </div>
       </div>
     </div>
   )
