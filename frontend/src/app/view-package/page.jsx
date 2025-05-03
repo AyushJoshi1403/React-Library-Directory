@@ -12,20 +12,25 @@ const Packages = () => {
 
 
   const fetchPackages = () => {
+    console.log('Fetching packages...'); // Debugging log
+    console.log('Token:', token); // Log the token to verify its presence
+
     axios.get('http://localhost:5000/package/getall', {
       headers: {
         'x-auth-token': token
       }
     })
       .then((result) => {
-        console.table(result.data);
+        console.log('API Response:', result.data); // Log the API response
         setPackageList(result.data);
       }).catch((err) => {
-        console.log(err);
+        console.error('Error fetching packages:', err); // Log the error
 
         if (err?.response?.status === 403) {
-          toast.error('Your are not authorized to view this page');
-          router.push('/login')
+          toast.error('You are not authorized to view this page');
+          router.push('/login');
+        } else {
+          toast.error('Failed to fetch packages. Please try again later.');
         }
       });
   }
